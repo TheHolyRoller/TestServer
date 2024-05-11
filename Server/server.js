@@ -1,14 +1,11 @@
 const express = require('express');
-const multer = require('multer');
-const fs = require('fs');
 const app = express();
-const cors = require('cors'); // Require the CORS library
+
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
 
 
-app.use(cors());
-const port = 3000;
-
-
-app.listen(port, () => {
-    console.log(`Server listening on ${port}`);
-  });
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
